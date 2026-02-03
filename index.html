@@ -5,35 +5,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name</title>
 
-  <!-- Fonts -->
+  <!-- Fonts: elegant serif + clean sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
-<body>
 
-  <header class="site-header">
+<body>
+  <!-- Top ribbon -->
+  <div class="ribbon">
+    <p class="ribbon__text">Portfolio • Work • Writing • Contact</p>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
     <nav class="nav">
-      <span class="logo">Your Name</span>
-      <ul class="nav-links">
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Writing</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Resume</a></li>
+      <a class="brand" href="#">YOUR NAME</a>
+
+      <ul class="nav__links">
+        <li><a href="#work">work</a></li>
+        <li><a href="#writing">writing</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact" class="nav__cta">inquire</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero: split editorial layout -->
   <main class="hero">
-    <h1>Designing & building thoughtful digital experiences.</h1>
-    <p class="subtitle">
-      Computer & Information Technology student focused on clean systems,
-      strong storytelling, and elegant interfaces.
-    </p>
+    <section class="hero__left">
+      <p class="kicker">computer & information technology</p>
+
+      <h1 class="hero__title">
+        Building clean systems<br/>
+        with an editorial eye.
+      </h1>
+
+      <p class="hero__subtitle">
+        I’m a 22-year-old college student showcasing projects, writing, and case work.
+        I like neutral palettes, strong typography, and shipping things that are practical.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work">view work</a>
+        <a class="btn btn--ghost" href="#writing">read writing</a>
+      </div>
+
+      <div class="hero__meta">
+        <div class="meta__item">
+          <span class="meta__label">focus</span>
+          <span class="meta__value">product, systems, sustainability</span>
+        </div>
+        <div class="meta__item">
+          <span class="meta__label">based</span>
+          <span class="meta__value">california / purdue</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero__right">
+      <div class="frame">
+        <!-- Replace with your own image in /assets/images/hero.jpg -->
+        <img src="assets/images/hero.jpg" alt="Hero image" onerror="this.style.display='none'; this.parentElement.classList.add('frame--empty');" />
+        <div class="frame__fallback">
+          <p class="frame__label">Add an image</p>
+          <p class="frame__hint">Place <span>hero.jpg</span> in <span>/assets/images</span></p>
+        </div>
+      </div>
+
+      <div class="figures">
+        <figure class="figure">
+          <div class="figure__box"></div>
+          <figcaption>Fig. 01</figcaption>
+        </figure>
+        <figure class="figure">
+          <div class="figure__box"></div>
+          <figcaption>Fig. 02</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
+  <!-- Oxblood marquee section -->
+  <section class="marquee">
+    <div class="marquee__inner">
+      <span>new work posted regularly</span>
+      <span>•</span>
+      <span>case studies</span>
+      <span>•</span>
+      <span>systems + product</span>
+      <span>•</span>
+      <span>writing</span>
+      <span>•</span>
+      <span>new work posted regularly</span>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="section">
+    <div class="section__header">
+      <h2 class="section__title">Selected Work</h2>
+      <p class="section__desc">A few highlights. Replace placeholders with your real projects.</p>
+    </div>
+
+    <div class="grid grid--work">
+      <article class="card">
+        <p class="card__tag">project</p>
+        <h3 class="card__title">Project Title One</h3>
+        <p class="card__text">
+          One-sentence description that feels confident. Focus on impact, outcome, and what you built.
+        </p>
+        <div class="card__links">
+          <a href="#" class="link">read case study</a>
+          <a href="#" class="link">github</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="card__tag">project</p>
+        <h3 class="card__title">Project Title Two</h3>
+        <p class="card__text">
+          Keep this short. Editorial sites feel premium when they are not overcrowded.
+        </p>
+        <div class="card__links">
+          <a href="#" class="link">read case study</a>
+          <a href="#" class="link">github</a>
+        </div>
+      </article>
+
+      <article class="card card--image">
+        <div class="card__image">
+          <!-- Replace with /assets/images/work-01.jpg -->
+          <img src="assets/images/work-01.jpg" alt="Work preview" onerror="this.style.display='none'; this.parentElement.classList.add('card__image--empty');" />
+          <div class="card__imageFallback">
+            <p>Drop <span>work-01.jpg</span> into <span>/assets/images</span></p>
+          </div>
+        </div>
+        <div class="card__imageCaption">
+          <span>Fig. 03</span>
+          <span>selected interface</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section id="writing" class="section section--alt">
+    <div class="section__header">
+      <h2 class="section__title">Writing & Case Work</h2>
+      <p class="section__desc">Linked documents you shared. These open in a new tab.</p>
+    </div>
+
+    <div class="grid grid--writing">
+      <a class="paper" href="https://docs.google.com/document/d/1WmLY8fhjqKvq5uptoOH0sH2vduYnDL3dfZp4imTXrKc/edit?usp=sharing" target="_blank" rel="noreferrer">
+        <p class="paper__kicker">document</p>
+        <h3 class="paper__title">Case Study 01</h3>
+        <p class="paper__text">Short description goes here. What is it and why it matters.</p>
+        <p class="paper__cta">open →</p>
+      </a>
+
+      <a class="paper" href="https://docs.google.com/document/d/1acdvX0xpqQKPU4VsN73bYdXe6sY-G2R4eFJa3_q_4KU/edit?usp=sharing" target="_blank" rel="noreferrer">
+        <p class="paper__kicker">document</p>
+        <h3 class="paper__title">Case Study 02</h3>
+        <p class="paper__text">Short description goes here. Replace with the real title later.</p>
+        <p class="paper__cta">open →</p>
+      </a>
+
+      <a class="paper" href="https://docs.google.com/document/d/1DOjVqDP4MeiafNsyHG9CpMsaZXRe9EuX/edit?usp=sharing&ouid=115013719456078669292&rtpof=true&sd=true" target="_blank" rel="noreferrer">
+        <p class="paper__kicker">document</p>
+        <h3 class="paper__title">Case Study 03</h3>
+        <p class="paper__text">This one looks like it may be a Word import. Still fine to link.</p>
+        <p class="paper__cta">open →</p>
+      </a>
+
+      <a class="paper" href="https://docs.google.com/document/d/13rr3svk9OceJB8A66gIZ0nD29e8F24vxl2NvKKvrm5c/edit?usp=sharing" target="_blank" rel="noreferrer">
+        <p class="paper__kicker">document</p>
+        <h3 class="paper__title">Case Study 04</h3>
+        <p class="paper__text">Short description goes here. Keep it one line if possible.</p>
+        <p class="paper__cta">open →</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="split">
+      <div class="split__left">
+        <h2 class="section__title">The Heart Behind the Work</h2>
+        <p class="lead">
+          I like projects that feel crisp, useful, and well-explained. My goal is to ship outcomes, not just code.
+        </p>
+        <p class="body">
+          This site is intentionally minimal: strong typography, calm neutrals, and an oxblood accent.
+          It is a portfolio first, and it will evolve as I publish more work.
+        </p>
+      </div>
+
+      <div class="split__right">
+        <div class="quote">
+          <p class="quote__text">
+            “Make it clean, but make it memorable.”
+          </p>
+          <p class="quote__by">notes to self</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="cta">
+    <div class="cta__inner">
+      <h2>Let’s tell your story.</h2>
+      <p>For now, link your email and LinkedIn here.</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="mailto:youremail@example.com">email me</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">linkedin</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Your Name • Built on GitHub Pages</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
