@@ -1,278 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emily Zhang</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emily Zhang</title>
 
-  <!-- Fonts: elegant serif + clean sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Fonts: elegant serif + clean sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 
 <body>
-  <!-- Top ribbon -->
-  <div class="ribbon">
-    <p class="ribbon__text">Ready to build with you</p>
-  </div>
+    <!-- Top ribbon -->
+    <div class="ribbon">
+        <p class="ribbon__text">Ready to grow with you</p>
+    </div>
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="nav">
-      <a class="brand" href="#">Emily Zhang</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a class="brand" href="#">Emily Zhang</a>
 
-      <ul class="nav__links">
-        <li><a href="#work">About</a></li>
-        <li><a href="#writing">Resume</a></li>
-        <li><a href="#about">Work</a></li>
-        <li><a href="#contact" class="nav__cta">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+            <ul class="nav__links">
+                <li><a href="#work">Resume</a></li>
+                <li><a href="#writing">Course Work</a></li>
+                <li><a href="#about">Work</a></li>
+                <li><a href="#contact" class="nav__cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero: split editorial layout -->
-  <main class="hero">
-    <section class="hero__left">
-      <p class="kicker">Computer & information technology, Data science</p>
+    <!-- Hero: split editorial layout -->
+    <main class="hero">
+        <section class="hero__left">
+            <p class="kicker">Computer & information technology, Data science</p>
 
-      <h1 class="hero__title">
-        Building clean systems change<br/>
-        with an editorial eye.
-      </h1>
+            <h1 class="hero__title">
+                I'm so glad you're here! 
+            </h1>
 
-      <p class="hero__subtitle">
-        description here change
-      </p>
+            <p class="hero__subtitle">
+                If we haven't met yet, hi - my name is Emily! I’m a senior at Purdue majoring in CNIT
+  and graduating in May 2026. I’m currently looking for full-time TPM or engineering roles in tech, and I love
+  working on automation and cloud systems. Outside of school and work, you’ll usually
+  find me chasing great food and matcha, traveling, pickleball, and <span class="highlight">building things that matter</span>.
+            </p>
 
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#work">view work</a>
-        <a class="btn btn--ghost" href="#writing">read writing change?</a>
-      </div>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#work">Jump to Resume</a>
+                <a class="btn btn--ghost" href="#writing">Jump to Course Work</a>
+            </div>
 
-      <div class="hero__meta">
-        <div class="meta__item">
-          <span class="meta__label">focus</span>
-          <span class="meta__value">Tech, Product Management, DevOps, Sustainability</span>
+            <div class="hero__meta">
+                <div class="meta__item">
+                    <span class="meta__label">focus</span>
+                    <span class="meta__value">Tech, Product Management, Engineering, DevOps, Sustainability</span>
+                </div>
+                <div class="meta__item">
+                    <span class="meta__label">Location Preferences</span>
+                    <span class="meta__value">California / NYC / Seattle</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero__right">
+            <div class="frame">
+                <figure class="figure figure--hero">
+                    <img src="/images/me.JPG" alt="me" class="hero__img"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('frame--empty');" />
+                    <figcaption>me!</figcaption>
+                </figure>
+
+                <div class="frame__fallback">
+                    <p class="frame__label">Add an image</p>
+                    <p class="frame__hint">Place <span>me.jpg</span> in <span>/images</span></p>
+                </div>
+            </div>
+
+
+            <div class="figures">
+                <figure class="figure">
+                    <img src="/images/art.JPG" alt="art!" class="figure__img"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('figure--empty');" />
+                    <figcaption>art!</figcaption>
+                </figure>
+
+                <figure class="figure">
+                    <img src="/images/food.JPG" alt="food!" class="figure__img"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('figure--empty');" />
+                    <figcaption>food!</figcaption>
+                </figure>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Oxblood marquee section -->
+    <section class="marquee">
+        <div class="marquee__inner">
+            <span>change this</span>
+            <span>•</span>
+            <span>case studies</span>
+            <span>•</span>
+            <span>systems + product</span>
+            <span>•</span>
+            <span>writing</span>
+            <span>•</span>
+            <span>new work posted regularly</span>
         </div>
-        <div class="meta__item">
-          <span class="meta__label">Location Preferences</span>
-          <span class="meta__value">California / NYC / Seattle</span>
-        </div>
-      </div>
     </section>
 
-    <section class="hero__right">
-      <div class="frame">
-  <figure class="figure figure--hero">
-    <img
-      src="/images/me.JPG"
-      alt="me"
-      class="hero__img"
-      onerror="this.style.display='none'; this.parentElement.classList.add('frame--empty');"
-    />
-    <figcaption>me!</figcaption>
-  </figure>
+    <!-- Work -->
+    <section id="work" class="section">
+        <div class="section__header section__header--center">
+  <h2 class="section__title">Resume</h2>
+</div>
 
-  <div class="frame__fallback">
-    <p class="frame__label">Add an image</p>
-    <p class="frame__hint">Place <span>me.jpg</span> in <span>/images</span></p>
+<h3 class="resume__subheading">Education</h3>
+<article class="card card--education">
+  <div class="edu__row">
+    <span class="edu__school">Purdue University – Main Campus | Polytechnic Institute</span>
+    <span class="edu__location">West Lafayette, IN</span>
   </div>
-</div>
+
+  <div class="edu__row edu__row--secondary">
+    <span class="edu__degree">
+      Bachelor of Science, Computer and Information Technology
+    </span>
+    <span class="edu__date">May 2026</span>
+  </div>
+
+  <div class="edu__detail">
+    <em>Applications in Data Science Certificate</em>
+    <span class="edu__gpa">CIT GPA: 3.91/4.0</span>
+  </div>
+
+  <p class="edu__text">
+    <strong>Relevant Coursework:</strong>
+    Advanced Analysis & Design, Applied Machine Learning, Database Programming,
+    Front-End Web Programming, IT Data Analytics, Object-Oriented Programming,
+    Responsible Data Science, System Administration
+  </p>
+
+  <p class="edu__text">
+    <strong>Awards & Honors:</strong>
+    Dean’s List (Aug 2022 – Current), Academic Honors (Aug 2022 – Current)
+  </p>
+</article>
+
+<h3 class="resume__subheading">Work Experience</h3>
+        <div class="grid grid--work">
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">Amazon Web Services</span>
+                    <span class="card__location">Herndon, VA</span>
+                </div>
+
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Data Center Operations Intern</span>
+                    <span class="card__dates">June 2025 - Aug 2025</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Automated the Network and Cabling Decommissioning ticket triage system using AWS Lambda, IAM
+                        roles, EventBridge, APIs, and CI/CD pipelines, saving 500+ manual hours per year.
+                    </li>
+                    <li>
+                        Resolved 4 application security tasks and completed 2 application security reviews to deploy
+                        code into production.
+                    </li>
+                    <li>
+                        Completed ~70 hours of shadowing and reverse-shadowing of the network decommission process,
+                        resolving 50 tickets.
+                    </li>
+                    <li>
+                        Organized CPR course, certifying 20+ technicians/managers toward Q1 2026 safety goal of 80%
+                        department certification.
+                    </li>
+                </ul>
+            </article>
 
 
-<div class="figures">
-  <figure class="figure">
-    <img
-      src="/images/art.JPG"
-      alt="art!"
-      class="figure__img"
-      onerror="this.style.display='none'; this.parentElement.classList.add('figure--empty');"
-    />
-    <figcaption>art!</figcaption>
-  </figure>
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">alpha Kappa Delta Phi</span>
+                    <span class="card__location">West Lafayette, IN</span>
+                </div>
 
-  <figure class="figure">
-    <img
-      src="/images/food.JPG"
-      alt="food!"
-      class="figure__img"
-      onerror="this.style.display='none'; this.parentElement.classList.add('figure--empty');"
-    />
-    <figcaption>food!</figcaption>
-  </figure>
-</div>
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Systems Analyst Intern</span>
+                    <span class="card__dates">Jan 2025 - June 2025</span>
+                </div>
 
+                <ul class="card__list">
+                    <li>
+                        Assisted in implementation and transition from GreekTrack to ChapterSpot, a membership management system.
+                    </li>
+                    <li>
+                        Conducted user acceptance testing for ChapterSpot and deactivation with 10+ users within GreekTrack.
+                    </li>
+                    <li>
+                        Developed resources to guide 8+ departments through system transitions, ensuring smooth adoption.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">StarPlus Energy</span>
+                    <span class="card__location">Kokomo, IN</span>
+                </div>
+
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Stack Process Engineering Intern</span>
+                    <span class="card__dates">May 2024 - July 2024</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Created and presented defect reports using MES and AQMS data for Samsung SDI’s EV battery for Stellantis vehicles, incorporating new Spotfire visualizations to enhance defect tracking and root-cause analysis.
+                    </li>
+                    <li>
+                        Researched 3 top defects and parameter correlations, implementing improvements in the manufacturing process.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">Krach Institute for Tech Diplomacy at Purdue</span>
+                    <span class="card__location">West Lafayette, IN</span>
+                </div>
+
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Tech Diplomacy Intern</span>
+                    <span class="card__dates">Nov 2023 - Feb 2024</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Cleaned 5+ large datasets, contributing to a smooth implementation of Salesforce within KITDP.
+                    </li>
+                    <li>
+                        Created and managed 40+ profiles in Salesforce once it was implemented.
+                    </li>
+                    <li>
+                        Computed 40+ employee satisfaction/work culture survey results, presenting future improvements on the team.
+                    </li>
+                    <li>
+                        Participated in the first launch-testing of the Tech Diplomacy Academy, providing feedback on improvements.
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">The Data Mine, Purdue University</span>
+                    <span class="card__location">West Lafayette, IN</span>
+                </div>
+
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Undergraduate Data Science Researcher, Purdue Strength Training and Conditioning</span>
+                    <span class="card__dates">Jan 2023 - May 2023</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Analyzed athlete data from 10+ web sources to predict injury risk, improving athlete training and performance.
+                    </li>
+                    <li>
+                        Presented in the Data Mine Symposium on research outcomes and future progressions of the project.
+                    </li>
+                </ul>
+
+                <div class="card__subheader">
+                    <span class="card__role">Undergraduate Data Science Researcher, Purdue Student Life</span>
+                    <span class="card__dates">Aug 2022 - Dec 2022</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Analyzed student data to improve campus life quality through marketing and engagement strategies.
+                    </li>
+                    <li>
+                        Proposed solutions to the Vice Provost of Student Life at Purdue to improve student experiences.
+                    </li>
+                </ul>
+            </article>
+
+            <h3 class="resume__subheading">EXTRACURRICULAR ACTIVITIES</h3>
+            <article class="card">
+                <!-- Header line -->
+                <div class="card__header">
+                    <span class="card__org">alpha Kappa Delta Phi, Purdue University</span>
+                    <span class="card__location">West Lafayette, IN</span>
+                </div>
+
+                <!-- Subheader line -->
+                <div class="card__subheader">
+                    <span class="card__role">Vice President of Finance</span>
+                    <span class="card__dates">Aug 2024 - Dec 2024</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Led financial operations of 30+ members, overseeing dues collection, budgeting, reimbursements, grant applications, fundraising, and tax filings to ensure fiscal responsibility, compliance, and transparency.
+                    </li>
+                    <li>
+                        Increased chapter savings by 15% and donated ~$3,000 towards philanthropy of breast cancer awareness.
+                    </li>
+                </ul>
+
+                <div class="card__subheader">
+                    <span class="card__role">Academic Chair</span>
+                    <span class="card__dates">Aug 2023 - Dec 2024</span>
+                </div>
+
+                <ul class="card__list">
+                    <li>
+                        Met with 15+ sisters to review academic plans to raise their GPA, reducing academic probation by 38%.
+                    </li>
+                </ul>
+            </article>
+            
+            <h3 class="resume__subheading">SKILLS & INTERESTS</h3>
+            <article class="card">
+            <ul class="card__list">
+                    <li>
+                        Technical: Agile, AWS, CSS, Excel, Figma, HTML, iSCSI, Java, Javascript, Jupyter Notebook, Machine Learning, Microsoft Suite, Networking, Python, R, Scrum, SPSS, SQL, VMware, Web Scraping.
+                    </li>
+                    <li>
+                        Interests: AI, Automation, Data Analysis, Process Improvement, Product Management, Sustainability, Systems Analysis.
+                    </li>
+                </ul>
+            </article>
+        </div>
     </section>
-  </main>
 
-  <!-- Oxblood marquee section -->
-  <section class="marquee">
-    <div class="marquee__inner">
-      <span>change this</span>
-      <span>•</span>
-      <span>case studies</span>
-      <span>•</span>
-      <span>systems + product</span>
-      <span>•</span>
-      <span>writing</span>
-      <span>•</span>
-      <span>new work posted regularly</span>
-    </div>
-  </section>
-
-  <!-- Work -->
-  <section id="work" class="section">
-    <div class="section__header">
-      <h2 class="section__title">Selected Work</h2>
-      <p class="section__desc">A few highlights. Replace placeholders with your real projects.</p>
-    </div>
-
-    <div class="grid grid--work">
-      <article class="card">
-        <p class="card__tag">project</p>
-        <h3 class="card__title">Project Title One</h3>
-        <p class="card__text">
-          One-sentence description that feels confident. Focus on impact, outcome, and what you built.
-        </p>
-        <div class="card__links">
-          <a href="#" class="link">read case study</a>
-          <a href="#" class="link">github</a>
+    <!-- Writing -->
+    <section id="writing" class="section section--alt">
+        <div class="section__header">
+            <h2 class="section__title">Course Work</h2>
+            <p class="section__desc">Peek into my work at Purdue!</p>
         </div>
-      </article>
 
-      <article class="card">
-        <p class="card__tag">project</p>
-        <h3 class="card__title">Project Title Two</h3>
-        <p class="card__text">
-          Keep this short. Editorial sites feel premium when they are not overcrowded.
-        </p>
-        <div class="card__links">
-          <a href="#" class="link">read case study</a>
-          <a href="#" class="link">github</a>
+        <div class="grid grid--writing">
+            <a class="paper"
+                href="https://docs.google.com/document/d/1EEZZrdsCuFgIE3-eAABvQ5JR3esVBbeLNPrTVyNZflk/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Project Scheduling and Cost Estimation Analysis</h3>
+                <p class="paper__text">A quantitative systems engineering assignment from CNIT 48000: Managing Information Technology Projects, focused on network scheduling and project 
+                    estimation techniques. This project applies critical path method (CPM) analysis, slack calculations, and PERT-based 
+                    duration modeling to evaluate project timelines, and uses function point analysis to estimate system size and development effort.
+                </p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/1WmLY8fhjqKvq5uptoOH0sH2vduYnDL3dfZp4imTXrKc/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Agile Milestone Example</h3>
+                <p class="paper__text">Showcases collaborative group work from CNIT 28000: Systems Analysis and Design
+                    Methods, including the development of a product backlog,
+                    detailed use-case narratives, and a team retrospective. The project emphasizes applying structured
+                    analysis techniques, coordinating within a team environment,
+                    and reflecting on both technical decisions and group processes throughout the system design
+                    lifecycle.
+                </p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/1DOjVqDP4MeiafNsyHG9CpMsaZXRe9EuX/edit?usp=sharing&ouid=115013719456078669292&rtpof=true&sd=true"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">UML Diagrams and SDLC Portfolio</h3>
+                <p class="paper__text">Highlights partner work from CNIT 38000: Advanced Analysis And Design, focused on
+                    analyzing and modeling information systems using the Smart City Services Management System (SCSMS).
+                    Through SDLC and UML methodologies, the projects demonstrate how complex systems can be clearly
+                    communicated, aligned with stakeholder needs, and designed for real-world implementation.</p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/1v5_RRpWZq6GwTZoeHdeEQUEUYMnV5m8T1VdNW6rByxw/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Network Security</h3>
+                <p class="paper__text">A hands-on technical report from CNIT 27000: Cybersecurity Fundamentals analyzing real-world network traffic and security vulnerabilities using 
+                    tools such as Wireshark and Nmap. This project explores ARP spoofing detection, DNS monitoring, port scanning, encrypted
+                     and unencrypted communication (Telnet vs. SSH), SSH port forwarding, TCP RST attacks, and key-based authentication to 
+                     demonstrate practical network security assessment and defense techniques.</p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/1DOjVqDP4MeiafNsyHG9CpMsaZXRe9EuX/edit?usp=sharing&ouid=115013719456078669292&rtpof=true&sd=true"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Database Programming</h3>
+                <p class="paper__text">A team-based database project from CNIT 37200: Database Programming, focused on
+                    designing a normalized relational schema for a flight reservation system, including an ERD to model
+                    entity relationships and constraints.
+                    The implementation used SQL and PL/SQL to enforce data integrity through triggers, constraints,
+                    stored procedures, and exception handling, with auditing and role-based access control to support
+                    security and real-world usage scenarios.</p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/1acdvX0xpqQKPU4VsN73bYdXe6sY-G2R4eFJa3_q_4KU/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">LSTM-based RNN Development</h3>
+                <p class="paper__text">Includes individual work from CNIT 48300: Applied Machine Learning. It explores the
+                    application of RNN architectures including LSTM and GRU across multiple tasks:
+                    one-step time-series forecasting, stock price prediction, and sentiment analysis on the IMDB
+                    dataset.
+                    Previous labs in this class include building linear regression, logistic regression, FCNN, CNN, and
+                    RNN models.</p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/13rr3svk9OceJB8A66gIZ0nD29e8F24vxl2NvKKvrm5c/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Source-free Machine Unlearning With Low Rank Hessian Estimation On Tabular Data
+                </h3>
+                <p class="paper__text">Project from CNIT 57100: Responsible Data Science, extending recent source-free
+                    machine unlearning methods from vision to tabular data, addressing privacy-sensitive domains
+                    such as income, health, and credit records. Using logistic regression on the UCI Adult dataset, it
+                    introduces diagonal Hessian estimation via parameter
+                    perturbations and Newton-style updates to remove the influence of forgotten samples without access
+                    to original training data, while maintaining strong
+                    performance on retained data.</p>
+                <p class="paper__cta">view →</p>
+            </a>
+
+            <a class="paper"
+                href="https://docs.google.com/document/d/19c2Jk6aXfZxL0ZBKAa0nbTxFV5JyS4FC-y5Y5ZWSqvY/edit?usp=sharing"
+                target="_blank" rel="noreferrer">
+                <p class="paper__kicker">document</p>
+                <h3 class="paper__title">Solving Big Data</h3>
+                <p class="paper__text">A research paper from CNIT 57000: IT Data Analytics, examining why scaling data systems alone does not guarantee better outcomes.
+                     The paper analyzes how small-data weaknesses are amplified in Big Data environments and proposes an operational framework 
+                     centered on data quality, time correctness, fairness, privacy, and cost-aware system design to support reliable, 
+                     reproducible decision-making at scale.</p>
+                <p class="paper__cta">view →</p>
+            </a>
         </div>
-      </article>
+    </section>
 
-      <article class="card card--image">
-        <div class="card__image">
-          <!-- Replace with /assets/images/work-01.jpg -->
-          <img src="assets/images/work-01.jpg" alt="Work preview" onerror="this.style.display='none'; this.parentElement.classList.add('card__image--empty');" />
-          <div class="card__imageFallback">
-            <p>Drop <span>work-01.jpg</span> into <span>/assets/images</span></p>
-          </div>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="split">
+            <div class="split__left">
+                <h2 class="section__title">The Heart Behind My Work</h2>
+                <p class="lead">
+                    I take ownership of my work and face ambiguity head-on, focusing on driving projects from uncertainty to execution.
+                </p>
+                <p class="body">
+                    Whether it’s automating a process, improving a system, or making something easier to use,
+        I’m always thinking about impact. I love learning, experimenting, and growing through every project,
+        and I’m excited to keep creating work that feels meaningful, thoughtful, and real.
+                </p>
+            </div>
+
+            <div class="split__right">
+                <div class="quote">
+                    <p class="quote__text">
+                        “Build it. Ship it. Measure it. Make it better.”
+                    </p>
+                    <p class="quote__by">Note to self</p>
+                </div>
+            </div>
         </div>
-        <div class="card__imageCaption">
-          <span>Fig. 03</span>
-          <span>selected interface</span>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="cta">
+        <div class="cta__inner">
+            <h2>Thanks for stopping by, come back soon <3 </h2>
+                    <p>Reach out!</p>
+                    <div class="cta__actions">
+                        <a class="btn btn--ghost" href="mailto:emilyxizhang@icloud.com">Email me</a>
+                        <a class="btn btn--ghost" href="https://www.linkedin.com/in/emilyxizhang/" target="_blank"
+                            rel="noreferrer">Linkedin</a>
+                    </div>
         </div>
-      </article>
-    </div>
-  </section>
+    </section>
 
-  <!-- Writing -->
-  <section id="writing" class="section section--alt">
-    <div class="section__header">
-      <h2 class="section__title">Course Work</h2>
-      <p class="section__desc">Peek into my work at Purdue!</p>
-    </div>
+    <footer class="footer">
+        <p>© <span id="year"></span> Meet Emily!</p>
+    </footer>
 
-    <div class="grid grid--writing">
-      <a class="paper" href="https://docs.google.com/document/d/1WmLY8fhjqKvq5uptoOH0sH2vduYnDL3dfZp4imTXrKc/edit?usp=sharing" target="_blank" rel="noreferrer">
-        <p class="paper__kicker">document</p>
-        <h3 class="paper__title">Agile Milestone Example</h3>
-        <p class="paper__text">Showcases collaborative group work from CNIT 28000: Systems Analysis and Design Methods, including the development of a product backlog, 
-            detailed use-case narratives, and a team retrospective. The project emphasizes applying structured analysis techniques, coordinating within a team environment, 
-            and reflecting on both technical decisions and group processes throughout the system design lifecycle.
-        </p>
-        <p class="paper__cta">open →</p>
-      </a>
-
-      <a class="paper" href="https://docs.google.com/document/d/1DOjVqDP4MeiafNsyHG9CpMsaZXRe9EuX/edit?usp=sharing&ouid=115013719456078669292&rtpof=true&sd=true" target="_blank" rel="noreferrer">
-        <p class="paper__kicker">document</p>
-        <h3 class="paper__title">UML Diagrams and SDLC Portfolio</h3>
-        <p class="paper__text">Highlights partner work from CNIT 38000: Advanced Analysis And Design, focused on analyzing and modeling information systems using the Smart City Services Management System (SCSMS). 
-            Through SDLC and UML methodologies, the projects demonstrate how complex systems can be clearly communicated, aligned with stakeholder needs, and designed for real-world implementation.</p>
-        <p class="paper__cta">open →</p>
-      </a>
-
-      <a class="paper" href="https://docs.google.com/document/d/1DOjVqDP4MeiafNsyHG9CpMsaZXRe9EuX/edit?usp=sharing&ouid=115013719456078669292&rtpof=true&sd=true" target="_blank" rel="noreferrer">
-        <p class="paper__kicker">document</p>
-        <h3 class="paper__title">Database Programming</h3>
-        <p class="paper__text">A team-based database project from CNIT 37200: Database Programming, focused on designing a normalized relational schema for a flight reservation system, including an ERD to model entity relationships and constraints. 
-            The implementation used SQL and PL/SQL to enforce data integrity through triggers, constraints, stored procedures, and exception handling, with auditing and role-based access control to support 
-            security and real-world usage scenarios.</p>
-        <p class="paper__cta">open →</p>
-      </a>
-
-      <a class="paper" href="https://docs.google.com/document/d/1acdvX0xpqQKPU4VsN73bYdXe6sY-G2R4eFJa3_q_4KU/edit?usp=sharing" target="_blank" rel="noreferrer">
-        <p class="paper__kicker">document</p>
-        <h3 class="paper__title">LSTM-based RNN Development</h3>
-        <p class="paper__text">Includes individual work from CNIT 483: Applied Machine Learning. It explores the application of RNN architectures including LSTM and GRU across multiple tasks: 
-            one-step time-series forecasting, stock price prediction, and sentiment analysis on the IMDB dataset.  
-            Previous labs in this class include building linear regression, logistic regression, FCNN, CNN, and RNN models.</p>
-        <p class="paper__cta">open →</p>
-      </a>
-
-      <a class="paper" href="https://docs.google.com/document/d/13rr3svk9OceJB8A66gIZ0nD29e8F24vxl2NvKKvrm5c/edit?usp=sharing" target="_blank" rel="noreferrer">
-        <p class="paper__kicker">document</p>
-        <h3 class="paper__title">Source-free Machine Unlearning With Low Rank Hessian Estimation On Tabular Data</h3>
-        <p class="paper__text">Project from CNIT 57100: Responsible Data Science, extending recent source-free machine unlearning methods from vision to tabular data, addressing privacy-sensitive domains 
-            such as income, health, and credit records. Using logistic regression on the UCI Adult dataset, it introduces diagonal Hessian estimation via parameter 
-            perturbations and Newton-style updates to remove the influence of forgotten samples without access to original training data, while maintaining strong 
-            performance on retained data.</p>
-        <p class="paper__cta">open →</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="split">
-      <div class="split__left">
-        <h2 class="section__title">The Heart Behind the Work</h2>
-        <p class="lead">
-          I like projects that feel crisp, useful, and well-explained. My goal is to ship outcomes, not just code.
-        </p>
-        <p class="body">
-          This site is intentionally minimal: strong typography, calm neutrals, and an oxblood accent.
-          It is a portfolio first, and it will evolve as I publish more work.
-        </p>
-      </div>
-
-      <div class="split__right">
-        <div class="quote">
-          <p class="quote__text">
-            “Make it clean, but make it memorable.”
-          </p>
-          <p class="quote__by">notes to self</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="cta">
-    <div class="cta__inner">
-      <h2>Thanks for stopping by, come back soon <3 </h2>
-      <p>Reach out!</p>
-      <div class="cta__actions">
-        <a class="btn btn--ghost" href="mailto:emilyxizhang@icloud.com">Email me</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/emilyxizhang/" target="_blank" rel="noreferrer">Linkedin</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> Meet Emily!</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
