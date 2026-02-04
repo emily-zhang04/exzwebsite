@@ -300,9 +300,13 @@ figure figcaption{
   padding: 62px 22px;
 }
 .section--alt{
-  background: rgba(255,255,255,0.35);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+    background: rgba(255,255,255,0.35);
+  border: 1px solid var(--rule);
+  border-radius: 24px;
+  padding: 64px 32px;
+  margin: 64px auto;
+  max-width: 1200px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.04);
 }
 .section__header{
   display:flex;
@@ -353,6 +357,10 @@ figure figcaption{
   padding: 18px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.06);
 }
+#work .card {
+  margin-bottom: 5px;
+}
+
 .card__tag{
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -615,7 +623,7 @@ figure figcaption{
   margin-top: 10px;
 }
 .resume__subheading {
-  margin: 32px 0 12px;
+  margin: 15px 0 6px;
   font-size: 18px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -683,3 +691,6 @@ figure figcaption{
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
