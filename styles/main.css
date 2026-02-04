@@ -228,10 +228,43 @@ body{
 figure figcaption{
   margin-top: 8px;
   font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
   color: var(--muted);
+  font-family: var(--sans);
 }
+
+.figure {
+  flex: 1;
+}
+
+.figure__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+  display: block;
+  background: rgba(90,20,20,0.08);
+}
+
+/* Fallback if image missing */
+.figure--empty::before {
+  content: "Add image";
+  display: block;
+  height: 110px;
+  border-radius: 14px;
+  border: 1px solid var(--rule);
+  background: rgba(90,20,20,0.08);
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Marquee */
 .marquee{
