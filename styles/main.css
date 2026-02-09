@@ -103,6 +103,86 @@ body {
     color: var(--paper);
 }
 
+/* Mobile nav (hamburger) - keeps desktop layout unchanged */
+.nav {
+  position: relative;
+}
+
+.nav__toggle{
+  display: none;              /* <-- IMPORTANT: hide on desktop */
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+
+
+.nav__toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  margin: 0;
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+.nav__mobile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: rgba(247, 243, 236, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 22px 18px;
+}
+
+.nav__mobileLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.nav__mobileLinks a {
+  text-decoration: none;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+}
+
+.nav__mobileLinks a:hover {
+  color: var(--oxblood);
+}
+
+/* turn hamburger into an X when open */
+.nav.nav--open .nav__toggle span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.nav.nav--open .nav__toggle span:nth-child(2) { opacity: 0; }
+.nav.nav--open .nav__toggle span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+@media (max-width: 740px) {
+  .nav__links { display: none; }
+
+  .nav__toggle {
+    display: inline-flex;      /* show on mobile */
+    flex-direction: column;    /* stack the lines */
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__mobileLinks .nav__cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /* Hero */
 .hero {
     max-width: 1200px;

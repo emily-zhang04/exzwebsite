@@ -24,18 +24,36 @@
 
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <a class="brand" href="#">Emily Zhang</a>
+  <nav class="nav">
+    <a class="brand" href="#">Emily Zhang</a>
 
-            <ul class="nav__links">
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#work">Resume</a></li>
-                <li><a href="#writing">Course Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav__cta">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button class="nav__toggle" type="button"
+      aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav__links">
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#work">Resume</a></li>
+      <li><a href="#writing">Course Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+    </ul>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <ul class="nav__mobileLinks">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#work">Resume</a></li>
+        <li><a href="#writing">Course Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
 
     <!-- Hero: split editorial layout -->
     <main class="hero" id="intro">
@@ -463,7 +481,7 @@
             <a class="paper"
                 href="https://docs.google.com/presentation/d/11VDKNNObXlfKEoBKjHKM5uYP0fw8No5MHKM-FLYBU6Q/edit?usp=sharing"
                 target="_blank" rel="noreferrer">
-                <p class="paper__kicker">document</p>
+                <p class="paper__kicker">Presentation</p>
                 <h3 class="paper__title">Database Programming</h3>
                 <p class="paper__text">A team-based database project from CNIT 37200: Database Programming, focused on
                     designing a normalized relational schema for a flight reservation system, including an ERD to model
@@ -567,8 +585,47 @@
     </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile hamburger menu
+  const nav = document.querySelector(".nav");
+  const toggle = document.querySelector(".nav__toggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (nav && toggle && mobileMenu) {
+    const closeMenu = () => {
+      nav.classList.remove("nav--open");
+      toggle.setAttribute("aria-expanded", "false");
+      mobileMenu.hidden = true;
+    };
+
+    const openMenu = () => {
+      nav.classList.add("nav--open");
+      toggle.setAttribute("aria-expanded", "true");
+      mobileMenu.hidden = false;
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.contains("nav--open");
+      if (isOpen) closeMenu();
+      else openMenu();
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+      // If you resize back to desktop, hide mobile menu
+      if (window.innerWidth > 740) closeMenu();
+    });
+  }
+</script>
+
 </body>
 
 </html>
