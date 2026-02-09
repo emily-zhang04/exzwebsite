@@ -318,25 +318,43 @@ figure figcaption {
 
 
 /* Marquee */
+/* Marquee */
 .marquee {
-    margin-top: 10px;
-    background: var(--oxblood2);
-    color: rgba(255, 255, 255, 0.92);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    overflow: hidden;
+  margin-top: 10px;
+  background: var(--oxblood2);
+  color: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 18s linear infinite;
 }
 
 .marquee__inner {
-    display: flex;
-    gap: 14px;
-    padding: 14px 22px;
-    white-space: nowrap;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    animation: scroll 18s linear infinite;
+  display: inline-flex;
+  gap: 14px;
+  padding: 14px 22px;
+  white-space: nowrap;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  flex: 0 0 auto; /* don't shrink */
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
 @keyframes scroll {
     from {
