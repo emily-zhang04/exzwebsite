@@ -319,42 +319,57 @@ figure figcaption {
 
 /* Marquee */
 /* Marquee */
+/* Marquee */
 .marquee {
-  margin-top: 10px;
-  background: var(--oxblood2);
-  color: rgba(255, 255, 255, 0.92);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  overflow: hidden;
+    margin-top: 10px;
+    background: var(--oxblood2);
+    color: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    padding: 14px 0;
+    /* move vertical padding here to avoid seam weirdness */
 }
 
 .marquee__track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-  animation: marquee 18s linear infinite;
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    animation: marquee 18s linear infinite;
 }
 
 .marquee__inner {
-  display: inline-flex;
-  gap: 14px;
-  padding: 14px 22px;
-  white-space: nowrap;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  flex: 0 0 auto; /* don't shrink */
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    /* IMPORTANT: only pad on the right so the seam spacing is consistent */
+    padding-right: 22px;
+    flex: 0 0 auto;
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-33.3333%, 0, 0);
+    }
+
+    /* because we used 3 copies */
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .marquee__track {
+        animation: none;
+    }
+}
 
 @keyframes scroll {
     from {
